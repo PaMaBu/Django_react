@@ -7,6 +7,8 @@ import { Inicio } from './pages/Inicio';
 import { Inicio_formulario } from './pages/Inicio_formulario';
 import { Navigation } from './components/Navigation';
 import { Toaster } from 'react-hot-toast' 
+import { Cards } from './components/Cards'
+
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -18,6 +20,8 @@ function App() {
       reverseOrder={false}
     />
       <Navigation />
+      <Cards/>
+
       <Routes >
         {/* <Route path="/" element={<Navigate to="/inicio"/>} /> */}
         <Route path="/inicio" element={<Inicio />} />
