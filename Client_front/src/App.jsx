@@ -8,6 +8,7 @@ import { Inicio_formulario } from './pages/Inicio_formulario';
 import { Navigation } from './components/Navigation';
 import { Toaster } from 'react-hot-toast' 
 import { Cards } from './components/Cards'
+import { Page_pablo } from './pages/Page_pablo'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -20,13 +21,16 @@ function App() {
       reverseOrder={false}
     />
       <Navigation />
-      <Cards/>
+      {/* <Cards/> */}
 
       <Routes >
         {/* <Route path="/" element={<Navigate to="/inicio"/>} /> */}
+        <Route path="/" element={<Cards />} />
         <Route path="/inicio" element={<Inicio />} />
         <Route path="/inicio_formulario" element={<Inicio_formulario />} />
         <Route path="/inicio/:id" element={<Inicio_formulario />} />
+        {/* rutas page */}
+        <Route path="/pablo_page" element={<Page_pablo />} />
       </Routes>
     </div>
     
