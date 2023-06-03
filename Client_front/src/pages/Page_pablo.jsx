@@ -26,7 +26,7 @@ export function Page_pablo() {
                 
             </Grid>
         </Grid>
-      <Proyectos_lista />
+      {/* <Proyectos_lista /> */}
       <Button onClick={() => {
             navigate('api_pokemon')
         }} className=''>pokemons</Button>
