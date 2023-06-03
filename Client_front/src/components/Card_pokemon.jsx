@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 export function Card_pokemon(id_pokemon) {
     console.log("ide del pokemon",id_pokemon)
     const [Pokemon_details, setPokemon_details] = useState([] );
+    const [Pokemon_sprites, setPokemon_sprites ] = useState([] );
 
     useEffect(() => {
         console.log("cargada")
@@ -18,7 +19,7 @@ export function Card_pokemon(id_pokemon) {
             console.log("Pokemon",resp.data.sprites)
             console.log("Pokemon",resp.data.sprites.front_default)
             setPokemon_details(resp.data);
-            
+            setPokemon_sprites(resp.data.sprites)
         }
         detalles_pokemon(id_pokemon)
         
@@ -27,7 +28,8 @@ export function Card_pokemon(id_pokemon) {
   return (
     <CardPrime key={Pokemon_details.name} >
         {Pokemon_details.name}
-        <img src={Pokemon_details.sprites.front_default} alt="" />
+        
+        <img src={Pokemon_sprites.front_default} alt={Pokemon_details.name} />
 
     </CardPrime>
   )

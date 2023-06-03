@@ -3,8 +3,14 @@ import { Grid } from '@mui/material';
 
 import { Proyectos_lista } from "../components/Proyectos_lista";
 import { Card as CardPrime } from 'primereact/card';
+import { Button } from 'primereact/button';
+
+import { useNavigate } from 'react-router-dom'; 
+
+
 
 export function Page_pablo() {
+  const navigate = useNavigate()
   return (
     <div>
         <CardPrime>
@@ -21,6 +27,9 @@ export function Page_pablo() {
             </Grid>
         </Grid>
       <Proyectos_lista />
+      <Button onClick={() => {
+            navigate('api_pokemon')
+        }} className=''>pokemons</Button>
     </div>
   )
 }
