@@ -30,7 +30,7 @@ function App() {
 
           <Routes >
             <Route path="/" element={<Navigate to="/"/>} />
-            <Route path="/" element={<Cards />} />
+            <Route path="/Django_react" element={<Cards />} />
             <Route path="/inicio" element={<Inicio />} />
             <Route path="/inicio_formulario" element={<Inicio_formulario />} />
             <Route path="/inicio/:id" element={<Inicio_formulario />} />
