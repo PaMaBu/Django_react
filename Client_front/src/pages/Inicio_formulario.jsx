@@ -42,7 +42,7 @@ export function Inicio_formulario() {
     console.log("EXITOSO...")
     toast.success('Exitoso',{position:"top-right"})
     console.log("EXITOSO2...")
-    navigate('/inicio')
+    navigate('/Django_react/inicio')
     
   })
 
@@ -126,7 +126,7 @@ export function Inicio_formulario() {
           const accepted= window.confirm("estas seguro de eliminar el registro" + params.id+ "?")
           if (accepted){
             await delete_reg(params.id)
-            navigate('/inicio')
+            navigate('/Django_react/inicio')
           }
         }}
         >Borrar</Button>

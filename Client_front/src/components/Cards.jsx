@@ -12,7 +12,7 @@ export function Cards() {
 
     const redirect = () => {
   
-    Navigate('/pablo_page')
+    Navigate('/Django_react/pablo_page')
 
 
     }
@@ -22,7 +22,7 @@ export function Cards() {
         <CardPrime title=""  className="md:w-25rem " >
         <Grid container spacing={3} sx={{ justifyContent: 'center',alignItems: 'center'  }}>
             <Grid item md={4} rowSpacing={5} sx={{ width: 200, my:5, borderRadius:'20px', borderColor: 'primary.main', cursor:'pointer' }} >
-                <div className='animate__animated animate__bounceInLeft' onClick={() => navigate('/pablo_page')} >
+                <div className='animate__animated animate__bounceInLeft' onClick={() => navigate('/Django_react/pablo_page')} >
                     <img className='rounded-full' src={pablo} alt='img_perfil' ></img>
                     <h1 className='card-title center p-card-title'>Pablo</h1>
                     <p class="p-card-subtitle">
