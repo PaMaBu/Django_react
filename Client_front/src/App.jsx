@@ -9,6 +9,7 @@ import { Navigation } from './components/Navigation';
 import { Toaster } from 'react-hot-toast' 
 import { Cards } from './components/Cards'
 import { Page_pablo } from './pages/Page_pablo'
+import { Page_pablo_api_pokemon } from './pages/Page_pablo_api_pokemon'
 // import { ChakraProvider } from '@chakra-ui/react'
   
 
@@ -28,13 +29,14 @@ function App() {
           {/* <Cards/> */}
 
           <Routes >
-            {/* <Route path="/" element={<Navigate to="/inicio"/>} /> */}
+            <Route path="/" element={<Navigate to="/"/>} />
             <Route path="/" element={<Cards />} />
             <Route path="/inicio" element={<Inicio />} />
             <Route path="/inicio_formulario" element={<Inicio_formulario />} />
             <Route path="/inicio/:id" element={<Inicio_formulario />} />
             {/* rutas page */}
             <Route path="/pablo_page" element={<Page_pablo />} />
+            <Route path="/pablo_page/api_pokemon" element={<Page_pablo_api_pokemon />} />
           </Routes>
         </div>
         
