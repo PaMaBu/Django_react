@@ -37,6 +37,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: Client_front/package-lock.json
       - name: Install dependencies
+        working-directory: ./Client_front/
         run: npm install
       - name: Build
         run: npm run build
