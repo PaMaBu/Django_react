@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from .views import MonedaViewSet
+from .views import *
 # from .views import moneda_list
 
 
@@ -16,6 +16,7 @@ from .views import *
 
 router = DefaultRouter()
 router.register(r'monedas', MonedaViewSet)
+router.register(r'proyectos', ProyectoCatProyectoViewSet)
 
 
 urlpatterns = [

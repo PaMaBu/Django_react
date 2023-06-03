@@ -9,32 +9,38 @@ import { Navigation } from './components/Navigation';
 import { Toaster } from 'react-hot-toast' 
 import { Cards } from './components/Cards'
 import { Page_pablo } from './pages/Page_pablo'
+// import { ChakraProvider } from '@chakra-ui/react'
+  
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-  <BrowserRouter>
-    <div className="container mx-auto">
-    <Toaster
-      position="bottom-right"
-      reverseOrder={false}
-    />
-      <Navigation />
-      {/* <Cards/> */}
-
-      <Routes >
-        {/* <Route path="/" element={<Navigate to="/inicio"/>} /> */}
-        <Route path="/" element={<Cards />} />
-        <Route path="/inicio" element={<Inicio />} />
-        <Route path="/inicio_formulario" element={<Inicio_formulario />} />
-        <Route path="/inicio/:id" element={<Inicio_formulario />} />
-        {/* rutas page */}
-        <Route path="/pablo_page" element={<Page_pablo />} />
-      </Routes>
-    </div>
     
-  </BrowserRouter>
+    //<ChakraProvider>
+      <BrowserRouter>
+        <div className="container mx-auto">
+        <Toaster
+          position="bottom-right"
+          reverseOrder={false}
+        />
+          <Navigation />
+          {/* <Cards/> */}
+
+          <Routes >
+            {/* <Route path="/" element={<Navigate to="/inicio"/>} /> */}
+            <Route path="/" element={<Cards />} />
+            <Route path="/inicio" element={<Inicio />} />
+            <Route path="/inicio_formulario" element={<Inicio_formulario />} />
+            <Route path="/inicio/:id" element={<Inicio_formulario />} />
+            {/* rutas page */}
+            <Route path="/pablo_page" element={<Page_pablo />} />
+          </Routes>
+        </div>
+        
+      </BrowserRouter>
+    //</ChakraProvider>
+  
 
     // <>
  

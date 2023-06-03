@@ -27,3 +27,17 @@ export const update_reg =(id, moneda) => {
     // return axios.post("http://192.168.100.4/api/monedas/")
     return apiUrl.put("/monedas/"+id+"/",moneda);
 }
+
+export const get_list_proyectos =() => {
+    // return axios.post("http://192.168.100.4/api/monedas/")
+    return apiUrl.get("/proyectos/");
+}
+// API_KEY gifts
+// 9aOtXAFRpGfxTFcKWtDLLala4Fd6TJrk
+// https://api.giphy.com/v1/gifs
+// YOURKEY="271c723c";
+// http://img.omdbapi.com/?apikey=[yourkey]&
+
+// https://pokeapi.co/api/v2/
+
+//RGAPI-5b504cae-3d93-464c-bc69-65ae886be543

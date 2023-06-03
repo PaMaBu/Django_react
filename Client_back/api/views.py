@@ -2,8 +2,8 @@ from operator import index
 # from socket import J1939_PGN_REQUEST
 from urllib import request
 from django.shortcuts import render, HttpResponse
-from .serializers import MonedaSerializer
-from .models import Moneda
+from .serializers import *
+from .models import *
 from django.http import JsonResponse
 # from rest_framework.parsers import JSONParser  
 from rest_framework import status, generics, viewsets
@@ -34,3 +34,8 @@ class MonedaViewSet(viewsets.ModelViewSet):
     queryset = Moneda.objects.all()
     serializer_class = MonedaSerializer
     
+    
+    
+class ProyectoCatProyectoViewSet(viewsets.ModelViewSet):
+    queryset = ProyectosCatProyecto.objects.all().only('id_proyecto_proyecto','nombre_proyecto','descripcion','ruta','dueño','estatus')
+    serializer_class = ProyectoCatProyectoerializer
