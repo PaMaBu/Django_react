@@ -40,6 +40,7 @@ jobs:
         working-directory: ./Client_front/
         run: npm install
       - name: Build
+        working-directory: ./Client_front/
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
