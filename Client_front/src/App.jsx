@@ -29,14 +29,14 @@ function App() {
           {/* <Cards/> */}
 
           <Routes >
-            <Route path="/" element={<Navigate to="/"/>} />
+            <Route path="/" element={<Navigate to="/Django_react/"/>} />
             <Route path="/Django_react" element={<Cards />} />
-            <Route path="/inicio" element={<Inicio />} />
-            <Route path="/inicio_formulario" element={<Inicio_formulario />} />
-            <Route path="/inicio/:id" element={<Inicio_formulario />} />
+            <Route path="/Django_react/inicio" element={<Inicio />} />
+            <Route path="/Django_react/inicio_formulario" element={<Inicio_formulario />} />
+            <Route path="/Django_react/inicio/:id" element={<Inicio_formulario />} />
             {/* rutas page */}
-            <Route path="/pablo_page" element={<Page_pablo />} />
-            <Route path="/pablo_page/api_pokemon" element={<Page_pablo_api_pokemon />} />
+            <Route path="/Django_react/pablo_page" element={<Page_pablo />} />
+            <Route path="/Django_react/pablo_page/api_pokemon" element={<Page_pablo_api_pokemon />} />
           </Routes>
         </div>
         
