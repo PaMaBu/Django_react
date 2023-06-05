@@ -3,7 +3,7 @@ import { get_apiPokemon } from '../api/inicio.api'
 import { get_apiPokemon_detail } from '../api/inicio.api';
 import { Card as CardPrime } from 'primereact/card';
 import { useEffect, useState } from 'react'
-
+import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
 
 export function Card_pokemon(id_pokemon) {
     console.log("ide del pokemon",id_pokemon)
@@ -26,6 +26,7 @@ export function Card_pokemon(id_pokemon) {
         
     }, [])
   return (
+    
     <CardPrime key={Pokemon_details.name} >
         {Pokemon_details.name}
         

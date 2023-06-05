@@ -20,24 +20,45 @@ function App() {
     
     //<ChakraProvider>
       <BrowserRouter>
-        <div className="container mx-auto">
-        <Toaster
-          position="bottom-right"
-          reverseOrder={false}
-        />
-          <Navigation />
-          {/* <Cards/> */}
+        <div className="grid-layout">
+        <div className="grid-header">
+          {/* <div className='grid-item'> */}
+            <Navigation />
+            <Toaster
+            position="bottom-right"
+            reverseOrder={false}
+            />
+          {/* </div> */}
+        </div>
+        
+        <div className="grid-menu">
+           
+        </div>
+        <div className="grid-izquierdo">
+          izquierdo
+        </div>
+        
+        <div className="grid-content">
+          
+            {/* <Cards/> */}
 
-          <Routes >
-            <Route path="/" element={<Navigate to="/Django_react/"/>} />
-            <Route path="/Django_react" element={<Cards />} />
-            <Route path="/Django_react/inicio" element={<Inicio />} />
-            <Route path="/Django_react/inicio_formulario" element={<Inicio_formulario />} />
-            <Route path="/Django_react/inicio/:id" element={<Inicio_formulario />} />
-            {/* rutas page */}
-            <Route path="/Django_react/pablo_page" element={<Page_pablo />} />
-            <Route path="/Django_react/pablo_page/api_pokemon" element={<Page_pablo_api_pokemon />} />
-          </Routes>
+            <Routes >
+              <Route path="/" element={<Navigate to="/Django_react/"/>} />
+              <Route path="/Django_react" element={<Cards />} />
+              <Route path="/Django_react/inicio" element={<Inicio />} />
+              <Route path="/Django_react/inicio_formulario" element={<Inicio_formulario />} />
+              <Route path="/Django_react/inicio/:id" element={<Inicio_formulario />} />
+              {/* rutas page */}
+              <Route path="/Django_react/pablo_page" element={<Page_pablo />} />
+              <Route path="/Django_react/pablo_page/api_pokemon" element={<Page_pablo_api_pokemon />} />
+            </Routes>
+        </div>
+        <div className="grid-derecho">
+          derecho
+        </div>
+        <div className="grid-footer">
+          footer
+        </div>
         </div>
         
       </BrowserRouter>

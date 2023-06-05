@@ -8,6 +8,14 @@ body {
   font-family: var(--font-family);
 }
 
+
+/* div{
+  display:flex;
+  background-color: rgb(187, 187, 187);
+  justify-content: center;
+  align-items: center;
+} */
+
 .shadow{
 
   width: 40px;

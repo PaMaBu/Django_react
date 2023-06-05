@@ -18,8 +18,8 @@ export function Cards() {
     }
   return (
     
-    <div className='container '>
-        <CardPrime title=""  className="md:w-25rem " >
+    <div className='grid-item-15'>
+        <CardPrime title=""  className="" >
         <Grid container spacing={3} sx={{ justifyContent: 'center',alignItems: 'center'  }}>
             <Grid item md={4} rowSpacing={5} sx={{ width: 200, my:5, borderRadius:'20px', borderColor: 'primary.main', cursor:'pointer' }} >
                 <div className='animate__animated animate__bounceInLeft' onClick={() => navigate('/Django_react/pablo_page')} >
