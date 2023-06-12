@@ -4,8 +4,8 @@ import useScrollPosition from '../../../hooks/useScrollPosition'
 import { AppBar, Box, Button, Container, Hidden, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { navbarContent } from '../../../utils/content'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import CallMadeIcon from '@mui/icons-material/callMade';
-import LanguageIcon from '@mui/icons-material/Language';
+import {CallMadeIcon, LanguageIcon} from '@mui/icons-material/';
+// import LanguageIcon from '@mui/icons-material/Language';
 import { Launch_button } from '../../buttons/1inchclone/Launch_button'
 
 
