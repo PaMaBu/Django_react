@@ -57,7 +57,7 @@ export function Contenedor_dataview() {
                         "
                         url="/public/proyectos/proyecto_api.png"
                         onClick={() => {
-                            navigate('/Django_react/pablo_page/api/')
+                            navigate('/Django_react/pablo_page/api_pokemon/')
                         }}
                     >
                     </CustomCard>

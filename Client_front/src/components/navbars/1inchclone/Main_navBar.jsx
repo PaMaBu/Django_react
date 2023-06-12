@@ -4,7 +4,8 @@ import useScrollPosition from '../../../hooks/useScrollPosition'
 import { AppBar, Box, Button, Container, Hidden, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { navbarContent } from '../../../utils/content'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import {CallMadeIcon, LanguageIcon} from '@mui/icons-material/';
+// import CallMadeIcon from '@mui/icons-material/CallMade';
+import LanguageIcon from '@mui/icons-material/Language';
 // import LanguageIcon from '@mui/icons-material/Language';
 import { Launch_button } from '../../buttons/1inchclone/Launch_button'
 
@@ -68,7 +69,7 @@ export function Main_navBar() {
 
           <LinkButton>
             <Typography variant='body2'>Blog</Typography>
-            <CallMadeIcon sx={{fontSize:10}}></CallMadeIcon>
+            {/* <CallMadeIcon sx={{fontSize:10}}></CallMadeIcon> */}
           </LinkButton>
         </Stack>
         
