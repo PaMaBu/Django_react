@@ -14,36 +14,49 @@ import { Paginator } from 'primereact/paginator';
 
 export function Page_pablo_api_pokemon() {
     const [Pokemons, setPokemons] = useState([]); 
+   
+    
+
+    // 1.- configuracion de hooks
     const [Pokemon_details, setPokemon_details] = useState([] );
-    // const [products, setProducts] = useState([]);
     const [layout, setLayout] = useState('grid');
     const [Paginacion, setPaginacion] = useState({ first: 0, rows: 10, totalRecords: 0 });
+    const [NuevaPaginacion, setNuevaPaginacion] = useState();
     const [first, setFirst] = useState(0);
     const [rows, setRows] = useState(10);
-    // const [Paginacion, SetPaginacion] = useState(0);
-    useEffect(() => {
-        console.log("cargada")
-        
-        cargar_lista(Paginacion)
-
-    }, [ Paginacion])
-
-    const cargar_lista = async(data) => { 
+    // 2.- call datos con axios
+    const cargar_lista = () => { 
         try {
-            console.log("data_Paginacion",data);
+            // console.log("data_Paginacion",data);
             // data = data || {};
-            const resp = await get_apiPokemon(data);
-            console.log("Pokemons",resp);
-            console.log("Pokemons",resp.data);
-            console.log("Pokemons",resp.data.results)
-            // console.log("Pokemons",resp.data.results[0])
-            setPokemons(resp.data.results);
+            // console.log("DATA",data);
+            get_apiPokemon().then((resp) => {
+                console.log("RESPUESTA AXIOS POKEMONS",resp)
+                console.log("Pokemons",resp);
+                console.log("Pokemons",resp.data);
+                console.log("Pokemons",resp.data.results)
+                // console.log("Pokemons",resp.data.results[0])
+                setPokemons(resp.data.results);
+                setPaginacion({first: NuevaPaginacion.first, rows: NuevaPaginacion.rows, totalRecords: resp.data.count });
+            });
+            
             // setPaginacion({...Paginacion, totalRecords: resp.data.count});
-            console.log("Paginacion",Paginacion)
+            // console.log("Paginacion",Paginacion)
+            
+            
         }catch (error) {
-            console.log(error);
+            console.log("error---",error);
         };
     };
+    useEffect(() => {
+        // console.log("cargada")
+        cargar_lista()
+
+    }, [ NuevaPaginacion ])
+    // 3.- definir datos o colunas
+
+    // 4.- renderizar
+    
     // const itemTemplate = (id_pokemon) => {
         
     //     return (
@@ -210,8 +223,8 @@ export function Page_pablo_api_pokemon() {
             rows: event.rows,
           };
           setPaginacion(newPaginacion);
-          cargar_lista(newPaginacion);
-        console.log("paginacion_event",Paginacion)
+        console.log("Paginacion",Paginacion)
+        console.log("NuevaPaginacion",NuevaPaginacion)
         console.log(event)
         // const resp = await get_apiPokemon(event)
         // console.log("Pokemons",resp)
@@ -223,13 +236,19 @@ export function Page_pablo_api_pokemon() {
         // setPokemons(resp.data.results);
         setFirst(event.first);
         setRows(event.rows);
+
     };
-    
-    return (
-        
-        <div className="card">
+    const ApiDataView = (value,itemTemplate,layout,header) => {
+        <div className="">
             <DataView className='' value={Pokemons} itemTemplate={itemTemplate} layout={layout} header={header()} />
-            <Paginator first={Paginacion.first}
+        </div>
+    }
+    return (
+    
+        <div className="card">
+            <DataView className='' value={Pokemons} itemTemplate={itemTemplate} layout={layout} header={header()} rows={Paginacion.rows} first={Paginacion.first} totalRecords={Paginacion.totalRecords > 0 ? Paginacion.totalRecords : 100} paginator={true} onPage={onPageChange}   />
+            
+            {/* <Paginator first={Paginacion.first}
                         rows={Paginacion.rows}
                         // totalRecords={Paginacion.totalRecords}
                         totalRecords={120}
@@ -237,7 +256,7 @@ export function Page_pablo_api_pokemon() {
                         onPageChange={onPageChange} 
                         // first={Paginacion} rows={rows} totalRecords={120} rowsPerPageOptions={[10, 20, 30]} onPageChange={onPageChange} 
                         
-                        />
+                        /> */}
         </div>
         //   <DataView value={Pokemons} itemTemplate={itemTemplate} />
         //   {/* {Pokemons.map(Pokemon => (

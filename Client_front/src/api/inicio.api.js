@@ -52,16 +52,23 @@ async function ExecuteRequest(url, data) {
 
     return data;
 }
-export const get_apiPokemon =(data) => {
-    data = data || {};
-    let paginacion='?offset='+data.first+'&limit='+data.rows
-    console.log("apiPokemon_paginacion",paginacion)
-    console.log("apiPokemon_data",data)
-    // ExecuteRequest(apiPokemon).then(data => {
-    //     console.dir("data_paginated",data);
-    //     return (data)
-    // });
-    return apiPokemon.get("/"+paginacion);
+export const get_apiPokemon =() => {
+    let paginacion=''
+    let data=''
+    if (data.first){
+        paginacion ='?offset='+data.first+'&limit='+data.rows
+        console.log("apiPokemon_paginacion",paginacion)
+        // console.log("apiPokemon_data",data)
+        // ExecuteRequest(apiPokemon).then(data => {
+        //     console.dir("data_paginated",data);
+        //     return (data)
+        // });
+        
+    }else{
+        data = data || {};
+        console.log("no hay data")
+    }
+    return apiPokemon.get("/"+paginacion)
 }
 
 

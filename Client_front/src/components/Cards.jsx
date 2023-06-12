@@ -6,6 +6,7 @@ import { Link, Navigate } from "react-router-dom"
 import { useNavigate, useParams } from 'react-router-dom'
 import { Card as CardPrime } from 'primereact/card';
 import { Divider } from 'primereact/divider';
+
 export function Cards() {
     const navigate = useNavigate()
   
@@ -18,12 +19,12 @@ export function Cards() {
     }
   return (
     
-    <div className='grid-item-15'>
+    <div className='grid-item'>
         <CardPrime title=""  className="" >
-        <Grid container spacing={3} sx={{ justifyContent: 'center',alignItems: 'center'  }}>
-            <Grid item md={4} rowSpacing={5} sx={{ width: 200, my:5, borderRadius:'20px', borderColor: 'primary.main', cursor:'pointer' }} >
-                <div className='animate__animated animate__bounceInLeft' onClick={() => navigate('/Django_react/pablo_page')} >
-                    <img className='rounded-full' src={pablo} alt='img_perfil' ></img>
+        <Grid container spacing={3} sx={{ justifyContent: 'center',alignItems: 'center', borderRadius:"40%" }}>
+            <Grid className='grid-item-15' item md={4} rowSpacing={5} sx={{ width: 200, my:5, borderRadius:'50%', borderColor: 'primary.main', cursor:'pointer' }} >
+                <div className='animate__animated animate__bounceInLeft' onClick={() => navigate('/Django_react/pablo_page')} style={{borderRadius:"50%"}} >
+                    <img className='rounded-full' src={pablo} alt='img_perfil' style={{borderRadius:"30%"}}></img>
                     <h1 className='card-title center p-card-title'>Pablo</h1>
                     <p class="p-card-subtitle">
                         El pablo A.K.A "El Conserje"
